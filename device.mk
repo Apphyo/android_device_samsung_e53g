@@ -16,7 +16,7 @@
 $(call inherit-product-if-exists, vendor/samsung/e53g/e53g-vendor.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/e53g/overlay
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
