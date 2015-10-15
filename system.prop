@@ -78,3 +78,6 @@ ro.gps.agps_provider=1
 # WFD
 persist.debug.wfd.enable=1
 persist.hwc.enable_vds=1
+
+#Simulate sdcard on /data/media
+persist.fuse_sdcard=true

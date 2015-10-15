@@ -37,9 +37,8 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := $(LOCAL_PATH)/recovery/recovery_keys.c
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/twrp.fstab
 BOARD_USES_MMC_UTILS := true
-BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_HAS_NO_MISC_PARTITION := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
@@ -48,16 +47,23 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP
 DEVICE_RESOLUTION := 720x1280
-#TW_BRIGHTNESS_PATH := "/sys/devices/soc.0/1a00000.qcom,mdss_mdp/qcom,mdss_fb_primary.135/leds/lcd-backlight/brightness"
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_NO_USB_STORAGE := true
-TW_MTP_DEVICE := /dev/usb_mtp_gadget
-RECOVERY_SDCARD_ON_DATA := true
-BOARD_RECOVERY_SWIPE := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_NEW_ION_HEAP := true
 TW_TARGET_USES_QCOM_BSP := true
+#TW_BRIGHTNESS_PATH := "/sys/devices/soc.0/1a00000.qcom,mdss_mdp/qcom,mdss_fb_primary.135/leds/lcd-backlight/brightness"
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/storage/extSdCard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_MTP_DEVICE := /dev/usb_mtp_gadget
+RECOVERY_SDCARD_ON_DATA := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_NEW_ION_HEAP := true
+TW_TARGET_USES_QCOM_BSP := true
+TW_INCLUDE_CRYPTO := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
