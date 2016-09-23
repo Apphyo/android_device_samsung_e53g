@@ -20,7 +20,7 @@ DEVICE_PATH := device/samsung/e53g
 -include device/samsung/msm8916-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := e53g,e5ltexx
+#TARGET_OTA_ASSERT_DEVICE := e53g,e5ltexx
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/e53g
@@ -67,6 +67,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Vendor Init
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_e53g
-TARGET_LIBINIT_DEFINES_FILE := libinit_e53g
+#TARGET_UNIFIED_DEVICE := true
+#TARGET_INIT_VENDOR_LIB := libinit_e53g
+#TARGET_LIBINIT_DEFINES_FILE := libinit_e53g
