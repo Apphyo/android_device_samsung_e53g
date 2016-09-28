@@ -63,6 +63,9 @@ BOARD_NO_SECURE_DISCARD := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
+# Samsung blobs need text relocations
+TARGET_NEEDS_TEXT_RELOCATIONS := true
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
